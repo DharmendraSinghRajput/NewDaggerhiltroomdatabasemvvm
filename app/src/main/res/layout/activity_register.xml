@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    tools:context=".ui.RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuidLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_17sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuidLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_17sdp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tnlUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:hint="Enter the name"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tnlUserEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="Enter the email"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@+id/tnlUserName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tnlUserPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="Enter the password"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@+id/tnlUserEmail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editUserPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tnlUserAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="Enter the address"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@+id/tnlUserPassword">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editUserAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RadioGroup
+            android:id="@+id/radiGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@+id/tnlUserAddress">
+
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onRadioClicked"
+                android:tag="sex_male"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:onClick="onRadioClicked"
+                android:tag="sex_female"
+                android:text="Female" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/save_data"
+            app:layout_constraintEnd_toEndOf="@id/endGuidLine"
+            app:layout_constraintStart_toStartOf="@id/startGuidLine"
+            app:layout_constraintTop_toBottomOf="@+id/radiGroup"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
